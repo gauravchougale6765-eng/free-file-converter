@@ -1,0 +1,226 @@
+/* ==========================
+   CONVERTER SECTION
+========================== */
+
+.converter{
+    padding:100px 10%;
+    background:#f8fbff;
+    text-align:center;
+}
+
+.converter h2{
+    font-size:42px;
+    color:#0f172a;
+    margin-bottom:15px;
+}
+
+.converter-text{
+    font-size:18px;
+    color:#64748b;
+    margin-bottom:50px;
+}
+
+/* ==========================
+   UPLOAD BOX
+========================== */
+
+.upload-box{
+    max-width:700px;
+    margin:0 auto;
+    padding:50px 30px;
+    background:#fff;
+    border:2px dashed #3b82f6;
+    border-radius:25px;
+    transition:.3s;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.upload-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(37,99,235,.15);
+}
+
+.upload-icon{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.upload-box h3{
+    font-size:28px;
+    color:#0f172a;
+    margin-bottom:12px;
+}
+
+.upload-box span{
+    display:block;
+    margin:20px 0;
+    color:#64748b;
+    font-weight:600;
+}
+
+.choose-btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#2563eb;
+    color:#fff;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.choose-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+.formats{
+    margin-top:25px;
+    color:#64748b;
+    font-size:15px;
+    line-height:1.7;
+}
+
+/* ==========================
+   FILE CARD
+========================== */
+
+.file-card{
+    max-width:700px;
+    margin:35px auto;
+    background:#fff;
+    border-radius:18px;
+    padding:22px 28px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.file-info h4{
+    color:#0f172a;
+    font-size:20px;
+}
+
+.file-info p{
+    color:#64748b;
+    margin-top:5px;
+}
+
+.uploaded{
+    color:#16a34a;
+    font-weight:700;
+}
+
+/* ==========================
+   CONVERT BOX
+========================== */
+
+.convert-box{
+    max-width:700px;
+    margin:30px auto;
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.select-group{
+    display:flex;
+    gap:25px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.select-item{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    min-width:220px;
+    text-align:left;
+}
+
+.select-item label{
+    margin-bottom:10px;
+    font-weight:600;
+    color:#0f172a;
+}
+
+.format-select{
+    padding:14px;
+    border:2px solid #dbeafe;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+.format-select:focus{
+    border-color:#2563eb;
+}
+
+.convert-btn{
+    margin-top:35px;
+    width:100%;
+    padding:16px;
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.convert-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.converter{
+    padding:80px 6%;
+}
+
+.converter h2{
+    font-size:32px;
+}
+
+.converter-text{
+    font-size:16px;
+}
+
+.upload-box{
+    padding:35px 20px;
+}
+
+.upload-box h3{
+    font-size:22px;
+}
+
+.file-card{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+.convert-box{
+    padding:25px;
+}
+
+.select-group{
+    flex-direction:column;
+}
+
+.convert-btn{
+    font-size:17px;
+}
+
+}

@@ -1,0 +1,480 @@
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+    padding: 90px 80px;
+
+    background:
+        radial-gradient(circle at top right, #dbeafe 0%, transparent 35%),
+        radial-gradient(circle at bottom left, #bfdbfe 0%, transparent 30%),
+        #ffffff;
+
+    overflow: hidden;
+}
+
+/* ===========================
+   LEFT SIDE
+=========================== */
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.welcome {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 10px 20px;
+
+    background: #eef4ff;
+    color: #2563eb;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.12);
+}
+
+.hero-left h1 {
+    margin-top: 25px;
+
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    color: #111827;
+}
+
+.hero-left h1 span {
+    color: #2563eb;
+}
+
+.hero-left h2 {
+    margin-top: 18px;
+
+    font-size: 34px;
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.hero-left p {
+    margin-top: 20px;
+
+    max-width: 600px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #6b7280;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+
+    margin-top: 35px;
+}
+
+.hero-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #2563eb;
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-4px);
+
+    background: #1d4ed8;
+
+    box-shadow: 0 15px 30px rgba(37,99,235,.35);
+}
+
+.secondary-btn {
+    padding: 15px 30px;
+
+    border: 2px solid #2563eb;
+    border-radius: 12px;
+
+    background: transparent;
+
+    color: #2563eb;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.secondary-btn:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* ===========================
+   SOCIAL ICONS
+=========================== */
+
+.social-links {
+    display: flex;
+    gap: 18px;
+
+    margin-top: 35px;
+}
+
+.social-links a {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #2563eb;
+
+    font-size: 22px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+
+    transition: .3s;
+}
+
+.social-links a:hover {
+    background: #2563eb;
+    color: white;
+
+    transform: translateY(-5px);
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
+
+.hero-right {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+
+    width: 520px;
+    height: 520px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Orbit Ring */
+
+.orbit-ring {
+    position: absolute;
+
+    width: 440px;
+    height: 440px;
+
+    border: 2px dashed #93c5fd;
+    border-radius: 50%;
+
+    animation: rotateRing 25s linear infinite;
+}
+
+@keyframes rotateRing {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hero Image */
+
+.hero-image {
+    width: 360px;
+    height: 360px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 8px solid white;
+
+    box-shadow: 0 20px 45px rgba(37, 99, 235, 0.18);
+
+    position: relative;
+    z-index: 5;
+
+    transition: .4s;
+}
+
+.hero-image:hover {
+    transform: scale(1.03);
+
+    box-shadow: 0 25px 60px rgba(37,99,235,.35);
+}
+
+/* ===========================
+   FILE ICONS
+=========================== */
+
+.pdf-icon,
+.word-icon,
+.jpg-icon,
+.ppt-icon,
+.txt-icon {
+
+    position: absolute;
+
+    width: 68px;
+
+    background: #fff;
+
+    padding: 10px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 28px rgba(0,0,0,.15);
+
+    z-index: 10;
+}
+
+/* Positions */
+
+.pdf-icon {
+    top: 55px;
+    left: 35px;
+}
+
+.word-icon {
+    top: 65px;
+    right: 25px;
+}
+
+.jpg-icon {
+    bottom: 120px;
+    left: 10px;
+}
+
+.ppt-icon {
+    bottom: 120px;
+    right: 10px;
+}
+
+.txt-icon {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Floating Animation */
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+.pdf-icon {
+    animation-delay: .2s;
+}
+
+.word-icon {
+    animation-delay: .8s;
+}
+
+.jpg-icon {
+    animation-delay: 1.4s;
+}
+
+.ppt-icon {
+    animation-delay: 2s;
+}
+
+.txt-icon {
+    animation-delay: 2.6s;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Hover */
+
+.pdf-icon:hover,
+.word-icon:hover,
+.jpg-icon:hover,
+.ppt-icon:hover,
+.txt-icon:hover {
+
+    transform: scale(1.08);
+
+    transition: .3s;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+
+    .hero {
+
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding: 60px 30px;
+    }
+
+    .hero-left,
+    .hero-right {
+
+        width: 100%;
+    }
+
+    .hero-left {
+
+        align-items: center;
+    }
+
+    .hero-left p {
+
+        max-width: 100%;
+    }
+
+    .image-container {
+
+        width: 380px;
+        height: 380px;
+    }
+
+    .orbit-ring {
+
+        width: 330px;
+        height: 330px;
+    }
+
+    .hero-image {
+
+        width: 270px;
+        height: 270px;
+    }
+
+    .pdf-icon,
+    .word-icon,
+    .jpg-icon,
+    .ppt-icon,
+    .txt-icon {
+
+        width: 55px;
+    }
+
+    .hero-buttons {
+
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .hero {
+
+        padding: 50px 20px;
+    }
+
+    .hero-left h1 {
+
+        font-size: 38px;
+    }
+
+    .hero-left h2 {
+
+        font-size: 24px;
+    }
+
+    .hero-left p {
+
+        font-size: 16px;
+    }
+
+    .image-container {
+
+        width: 320px;
+        height: 320px;
+    }
+
+    .orbit-ring {
+
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-image {
+
+        width: 220px;
+        height: 220px;
+    }
+
+    .pdf-icon,
+    .word-icon,
+    .jpg-icon,
+    .ppt-icon,
+    .txt-icon {
+
+        width: 45px;
+        padding: 8px;
+    }
+}
