@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Contact.css";
 
 import {
@@ -8,6 +9,48 @@ import {
 } from "react-icons/fa";
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState(""); // "sending" | "success" | "error"
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "5d2234f4-ee61-4aea-a2c5-cf00acba0eae",
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  };
+
   return (
     <section className="contact" id="contact">
       <div className="container">
@@ -58,19 +101,25 @@ function Contact() {
 
           {/* Right */}
 
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
 
             <div className="input-group">
 
               <input
                 type="text"
+                name="name"
                 placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
                 required
               />
 
               <input
                 type="email"
+                name="email"
                 placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
                 required
               />
 
@@ -78,21 +127,38 @@ function Contact() {
 
             <input
               type="text"
+              name="subject"
               placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
               required
             />
 
             <textarea
+              name="message"
               rows="6"
               placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
               required
             ></textarea>
 
-            <button type="submit">
+            <button type="submit" disabled={status === "sending"}>
               <FaPaperPlane />
-
-              Send Message
+              {status === "sending" ? "Sending..." : "Send Message"}
             </button>
+
+            {status === "success" && (
+              <p style={{ color: "green", marginTop: "10px" }}>
+                ✅ Message sent successfully!
+              </p>
+            )}
+
+            {status === "error" && (
+              <p style={{ color: "red", marginTop: "10px" }}>
+                ❌ Something went wrong. Please try again.
+              </p>
+            )}
 
           </form>
 
