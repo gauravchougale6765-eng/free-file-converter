@@ -1,5 +1,5 @@
 // src/api.js
-const API_BASE_URL = "https://free-file-converter-06l2.onrender.com";
+const API_BASE_URL = "https://free-file-converter-06l2.onrender.com/api";
 
 export async function convertFile(file, toFormat) {
   const formData = new FormData();
