@@ -1,59 +1,47 @@
 /* ===========================
-   HERO SECTION
+   HERO
 =========================== */
 
 .hero {
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 60px;
-
-    padding: 90px 80px;
-
+    padding-top: 110px;
     background:
-        radial-gradient(circle at top right, #dbeafe 0%, transparent 35%),
-        radial-gradient(circle at bottom left, #bfdbfe 0%, transparent 30%),
-        #ffffff;
+        radial-gradient(circle at top right, rgba(37,99,235,.10), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(59,130,246,.10), transparent 35%),
+        #f8fbff;
+}
 
-    overflow: hidden;
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
 }
 
 /* ===========================
-   LEFT SIDE
+   LEFT
 =========================== */
 
 .hero-left {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
-.welcome {
-    display: inline-flex;
-    align-items: center;
-
-    padding: 10px 20px;
-
+.hero-badge {
+    display: inline-block;
+    padding: 10px 18px;
     background: #eef4ff;
     color: #2563eb;
-
     border-radius: 30px;
-
-    font-size: 15px;
     font-weight: 600;
-
-    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.12);
+    margin-bottom: 25px;
 }
 
 .hero-left h1 {
-    margin-top: 25px;
-
-    font-size: 58px;
-    font-weight: 700;
+    font-size: 56px;
     line-height: 1.2;
-
-    color: #111827;
+    margin-bottom: 15px;
 }
 
 .hero-left h1 span {
@@ -61,279 +49,143 @@
 }
 
 .hero-left h2 {
-    margin-top: 18px;
-
-    font-size: 34px;
-    font-weight: 600;
-
+    font-size: 30px;
     color: #374151;
+    margin-bottom: 20px;
 }
 
 .hero-left p {
-    margin-top: 20px;
-
-    max-width: 600px;
-
     font-size: 18px;
-    line-height: 1.8;
-
+    line-height: 1.9;
     color: #6b7280;
+    max-width: 580px;
+    margin-bottom: 35px;
 }
 
 /* ===========================
-   BUTTONS
+   SOCIAL
 =========================== */
 
-.hero-buttons {
+.hero-social {
     display: flex;
     gap: 18px;
-
-    margin-top: 35px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
 }
 
-.hero-btn {
+.hero-social a {
     display: flex;
     align-items: center;
     gap: 10px;
-
-    padding: 15px 30px;
-
-    border: none;
-    border-radius: 12px;
-
-    background: #2563eb;
-    color: #fff;
-
-    font-size: 16px;
-    font-weight: 600;
-
-    cursor: pointer;
-
+    text-decoration: none;
+    color: #1f2937;
+    background: white;
+    padding: 14px 22px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 25px rgba(0,0,0,.05);
     transition: .3s;
+}
+
+.hero-social a:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 34px;
+    background: linear-gradient(135deg,#2563eb,#3b82f6);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 15px 35px rgba(37,99,235,.30);
+    transition: .35s;
 }
 
 .hero-btn:hover {
     transform: translateY(-4px);
-
-    background: #1d4ed8;
-
-    box-shadow: 0 15px 30px rgba(37,99,235,.35);
-}
-
-.secondary-btn {
-    padding: 15px 30px;
-
-    border: 2px solid #2563eb;
-    border-radius: 12px;
-
-    background: transparent;
-
-    color: #2563eb;
-
-    font-size: 16px;
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: .3s;
-}
-
-.secondary-btn:hover {
-    background: #2563eb;
-    color: white;
 }
 
 /* ===========================
-   SOCIAL ICONS
-=========================== */
-
-.social-links {
-    display: flex;
-    gap: 18px;
-
-    margin-top: 35px;
-}
-
-.social-links a {
-    width: 50px;
-    height: 50px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-decoration: none;
-
-    border-radius: 50%;
-
-    background: white;
-
-    color: #2563eb;
-
-    font-size: 22px;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,.08);
-
-    transition: .3s;
-}
-
-.social-links a:hover {
-    background: #2563eb;
-    color: white;
-
-    transform: translateY(-5px);
-}
-
-/* ===========================
-   RIGHT SIDE
+   RIGHT
 =========================== */
 
 .hero-right {
     flex: 1;
-
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.image-container {
+.hero-circle {
     position: relative;
-
-    width: 520px;
-    height: 520px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Orbit Ring */
-
-.orbit-ring {
-    position: absolute;
-
-    width: 440px;
-    height: 440px;
-
-    border: 2px dashed #93c5fd;
+    width: 500px;
+    height: 500px;
+    border: 6px solid white;
     border-radius: 50%;
-
-    animation: rotateRing 25s linear infinite;
+    background: white;
+    box-shadow: 0 20px 45px rgba(0,0,0,.12);
+    animation: rotateCircle 18s linear infinite;
 }
 
-@keyframes rotateRing {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Hero Image */
-
-.hero-image {
-    width: 360px;
-    height: 360px;
-
+.profile-image {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-
     border-radius: 50%;
-
-    border: 8px solid white;
-
-    box-shadow: 0 20px 45px rgba(37, 99, 235, 0.18);
-
-    position: relative;
-    z-index: 5;
-
-    transition: .4s;
-}
-
-.hero-image:hover {
-    transform: scale(1.03);
-
-    box-shadow: 0 25px 60px rgba(37,99,235,.35);
 }
 
 /* ===========================
-   FILE ICONS
+   FLOATING ICONS
 =========================== */
 
-.pdf-icon,
-.word-icon,
-.jpg-icon,
-.ppt-icon,
-.txt-icon {
-
+.floating {
     position: absolute;
-
-    width: 68px;
-
-    background: #fff;
-
+    width: 70px;
+    background: white;
     padding: 10px;
-
     border-radius: 18px;
-
-    box-shadow: 0 12px 28px rgba(0,0,0,.15);
-
-    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    animation: float 4s ease-in-out infinite;
 }
 
-/* Positions */
-
-.pdf-icon {
-    top: 55px;
-    left: 35px;
+.pdf {
+    top: 32px;
+    left: -20px;
 }
 
-.word-icon {
-    top: 65px;
-    right: 25px;
+.word {
+    top: 40px;
+    right: -25px;
 }
 
-.jpg-icon {
-    bottom: 120px;
-    left: 10px;
+.jpg {
+    left: -25px;
+    bottom: 110px;
 }
 
-.ppt-icon {
-    bottom: 120px;
-    right: 10px;
+.ppt {
+    right: -25px;
+    bottom: 90px;
 }
 
-.txt-icon {
-    bottom: 20px;
+.txt {
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* Floating Animation */
-
-.floating {
-    animation: float 4s ease-in-out infinite;
-}
-
-.pdf-icon {
-    animation-delay: .2s;
-}
-
-.word-icon {
-    animation-delay: .8s;
-}
-
-.jpg-icon {
-    animation-delay: 1.4s;
-}
-
-.ppt-icon {
-    animation-delay: 2s;
-}
-
-.txt-icon {
-    animation-delay: 2.6s;
-}
+/* ===========================
+   ANIMATION
+=========================== */
 
 @keyframes float {
 
@@ -342,139 +194,117 @@
     }
 
     50% {
-        transform: translateY(-12px);
+        transform: translateY(-15px);
     }
 
     100% {
         transform: translateY(0px);
     }
+
 }
 
-/* Hover */
+@keyframes rotateCircle {
 
-.pdf-icon:hover,
-.word-icon:hover,
-.jpg-icon:hover,
-.ppt-icon:hover,
-.txt-icon:hover {
+    from {
+        box-shadow: 0 20px 45px rgba(0,0,0,.12);
+    }
 
-    transform: scale(1.08);
+    to {
+        box-shadow: 0 20px 55px rgba(37,99,235,.20);
+    }
 
-    transition: .3s;
 }
 
 /* ===========================
-   RESPONSIVE
+   TABLET
 =========================== */
 
-@media (max-width: 992px) {
+@media(max-width:992px){
 
-    .hero {
-
-        flex-direction: column-reverse;
-
-        text-align: center;
-
-        padding: 60px 30px;
-    }
-
-    .hero-left,
-    .hero-right {
-
-        width: 100%;
-    }
-
-    .hero-left {
-
-        align-items: center;
-    }
-
-    .hero-left p {
-
-        max-width: 100%;
-    }
-
-    .image-container {
-
-        width: 380px;
-        height: 380px;
-    }
-
-    .orbit-ring {
-
-        width: 330px;
-        height: 330px;
-    }
-
-    .hero-image {
-
-        width: 270px;
-        height: 270px;
-    }
-
-    .pdf-icon,
-    .word-icon,
-    .jpg-icon,
-    .ppt-icon,
-    .txt-icon {
-
-        width: 55px;
-    }
-
-    .hero-buttons {
-
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+.hero-container{
+    flex-direction:column;
+    text-align:center;
 }
 
-@media (max-width: 576px) {
+.hero-left p{
+    margin:auto;
+    margin-bottom:35px;
+}
 
-    .hero {
+.hero-social{
+    justify-content:center;
+}
 
-        padding: 50px 20px;
-    }
+.hero-circle{
+    width:420px;
+    height:420px;
+}
 
-    .hero-left h1 {
+}
 
-        font-size: 38px;
-    }
+/* ===========================
+   MOBILE
+=========================== */
 
-    .hero-left h2 {
+@media(max-width:768px){
 
-        font-size: 24px;
-    }
+.hero{
+    padding-top:100px;
+}
 
-    .hero-left p {
+.hero-left h1{
+    font-size:40px;
+}
 
-        font-size: 16px;
-    }
+.hero-left h2{
+    font-size:24px;
+}
 
-    .image-container {
+.hero-left p{
+    font-size:16px;
+}
 
-        width: 320px;
-        height: 320px;
-    }
+.hero-circle{
+    width:320px;
+    height:320px;
+}
 
-    .orbit-ring {
+.floating{
+    width:55px;
+}
 
-        width: 280px;
-        height: 280px;
-    }
+.hero-btn{
+    width:100%;
+    justify-content:center;
+}
 
-    .hero-image {
+}
 
-        width: 220px;
-        height: 220px;
-    }
+/* ===========================
+   SMALL MOBILE
+=========================== */
 
-    .pdf-icon,
-    .word-icon,
-    .jpg-icon,
-    .ppt-icon,
-    .txt-icon {
+@media(max-width:480px){
 
-        width: 45px;
-        padding: 8px;
-    }
+.hero-left h1{
+    font-size:34px;
+}
+
+.hero-left h2{
+    font-size:20px;
+}
+
+.hero-circle{
+    width:260px;
+    height:260px;
+}
+
+.hero-social{
+    flex-direction:column;
+}
+
+.hero-social a{
+    justify-content:center;
+}
+
 }

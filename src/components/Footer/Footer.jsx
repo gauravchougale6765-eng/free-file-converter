@@ -1,115 +1,119 @@
 import "./Footer.css";
+
 import {
   FaGithub,
-  FaLinkedin,
   FaInstagram,
+  FaLinkedin,
   FaEnvelope,
+  FaArrowUp,
 } from "react-icons/fa";
 
 function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="footer">
 
-      <div className="footer-container">
+      <div className="container">
 
-        {/* Logo & About */}
+        <div className="footer-top">
 
-        <div className="footer-section">
+          {/* Brand */}
 
-          <h2>FileConverter</h2>
+          <div className="footer-brand">
 
-          <p>
-            Universal File Converter helps you convert files quickly,
-            securely, and completely free. Simple, fast and reliable.
-          </p>
+            <h2>
+              Free<span>FileConverter</span>
+            </h2>
 
-        </div>
+            <p>
+              Convert your files quickly, securely and
+              effortlessly. Built with React and FastAPI.
+            </p>
 
-        {/* Quick Links */}
+            <div className="footer-social">
 
-        <div className="footer-section">
+              <a
+                href="https://www.linkedin.com/in/gourav-chougale-961"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin />
+              </a>
 
-          <h3>Quick Links</h3>
+              <a
+                href="https://github.com/gauravchougale6765-eng"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub />
+              </a>
 
-          <ul>
+              <a
+                href="https://www.instagram.com/shivahoilc_gaurav_0113"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaInstagram />
+              </a>
 
-            <li><a href="#">Home</a></li>
+              <a href="mailto:support@freefileconverter.com">
+                <FaEnvelope />
+              </a>
 
-            <li><a href="#">Features</a></li>
+            </div>
 
-            <li><a href="#">Converter</a></li>
+          </div>
 
-            <li><a href="#">Contact</a></li>
+          {/* Quick Links */}
 
-          </ul>
+          <div className="footer-links">
 
-        </div>
+            <h3>Quick Links</h3>
 
-        {/* Supported Formats */}
+            <a href="#home">Home</a>
 
-        <div className="footer-section">
+            <a href="#converter">Converter</a>
 
-          <h3>Supported Formats</h3>
+            <a href="#formats">Formats</a>
 
-          <ul>
+            <a href="#features">Features</a>
 
-            <li>PDF</li>
+            <a href="#contact">Contact</a>
 
-            <li>DOCX</li>
+          </div>
 
-            <li>JPG / PNG</li>
+          {/* Supported */}
 
-            <li>PPTX</li>
+          <div className="footer-links">
 
-            <li>TXT</li>
+            <h3>Supported Formats</h3>
 
-            <li>WEBP</li>
+            <span>PDF</span>
 
-          </ul>
+            <span>JPG</span>
 
-        </div>
+            <span>PNG</span>
 
-        {/* Social */}
+            <span>WEBP</span>
 
-        <div className="footer-section">
-
-          <h3>Connect With Us</h3>
-
-          <div className="footer-social">
-
-            <a href="#">
-              <FaGithub />
-            </a>
-
-            <a href="#">
-              <FaLinkedin />
-            </a>
-
-            <a href="#">
-              <FaInstagram />
-            </a>
-
-            <a href="#">
-              <FaEnvelope />
-            </a>
+            <span>TXT</span>
 
           </div>
 
         </div>
 
-      </div>
+        <div className="footer-bottom">
 
-      <hr />
+          <p>
+            © {year} FreeFileConverter. All Rights Reserved.
+          </p>
 
-      <div className="footer-bottom">
+          <a href="#home" className="scroll-top">
+            <FaArrowUp />
+          </a>
 
-        <p>
-          © 2026 FileConverter. All Rights Reserved.
-        </p>
-
-        <p>
-          Designed & Developed by <span>Gourav Chougale</span>
-        </p>
+        </div>
 
       </div>
 

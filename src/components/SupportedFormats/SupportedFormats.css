@@ -1,28 +1,28 @@
 /* ===========================
-   FEATURES SECTION
+   SUPPORTED FORMATS
 =========================== */
 
-.features {
+.formats {
     padding: 100px 0;
-    background: #f8fbff;
+    background: #ffffff;
 }
 
-.features-header {
+.formats-title {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.features-header h2 {
+.formats-title h2 {
     font-size: 42px;
     color: #111827;
     margin-bottom: 15px;
 }
 
-.features-header p {
+.formats-title p {
     max-width: 650px;
     margin: auto;
-    color: #6b7280;
     font-size: 18px;
+    color: #6b7280;
     line-height: 1.8;
 }
 
@@ -30,9 +30,9 @@
    GRID
 =========================== */
 
-.features-grid {
+.formats-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
@@ -40,50 +40,44 @@
    CARD
 =========================== */
 
-.feature-card {
+.format-card {
     background: #ffffff;
     border-radius: 20px;
-    padding: 35px 30px;
+    padding: 35px 25px;
     text-align: center;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    transition: 0.35s ease;
     border: 1px solid #eef2f7;
-    box-shadow: 0 12px 35px rgba(0,0,0,.07);
-    transition: .35s ease;
-    cursor: pointer;
 }
 
-.feature-card:hover {
+.format-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 45px rgba(37,99,235,.15);
+    box-shadow: 0 18px 45px rgba(37, 99, 235, 0.15);
 }
 
-.feature-icon {
+.format-icon {
     width: 80px;
     height: 80px;
     margin: 0 auto 25px;
     border-radius: 50%;
-    background: linear-gradient(135deg,#2563eb,#3b82f6);
-    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    color: #ffffff;
     font-size: 34px;
-    transition: .35s;
 }
 
-.feature-card:hover .feature-icon {
-    transform: rotate(10deg) scale(1.08);
-}
-
-.feature-card h3 {
+.format-card h3 {
     font-size: 24px;
     color: #111827;
     margin-bottom: 15px;
 }
 
-.feature-card p {
+.format-card p {
     color: #6b7280;
-    line-height: 1.8;
     font-size: 16px;
+    line-height: 1.7;
 }
 
 /* ===========================
@@ -92,15 +86,15 @@
 
 @media (max-width: 992px) {
 
-    .features {
+    .formats {
         padding: 80px 0;
     }
 
-    .features-grid {
-        grid-template-columns: repeat(2,1fr);
+    .formats-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .features-header h2 {
+    .formats-title h2 {
         font-size: 34px;
     }
 
@@ -112,27 +106,27 @@
 
 @media (max-width: 768px) {
 
-    .features {
+    .formats {
         padding: 70px 0;
     }
 
-    .features-grid {
+    .formats-grid {
         grid-template-columns: 1fr;
     }
 
-    .features-header h2 {
+    .formats-title h2 {
         font-size: 30px;
     }
 
-    .features-header p {
+    .formats-title p {
         font-size: 16px;
     }
 
-    .feature-card {
+    .format-card {
         padding: 30px 20px;
     }
 
-    .feature-icon {
+    .format-icon {
         width: 70px;
         height: 70px;
         font-size: 30px;
@@ -146,19 +140,19 @@
 
 @media (max-width: 480px) {
 
-    .features-header h2 {
+    .formats-title h2 {
         font-size: 26px;
     }
 
-    .features-header p {
+    .formats-title p {
         font-size: 15px;
     }
 
-    .feature-card h3 {
+    .format-card h3 {
         font-size: 22px;
     }
 
-    .feature-card p {
+    .format-card p {
         font-size: 15px;
     }
 

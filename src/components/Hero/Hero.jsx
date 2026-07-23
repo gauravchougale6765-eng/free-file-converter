@@ -1,139 +1,135 @@
 import "./Hero.css";
-import heroImg from "../../assets/hero.png";
-import pdfIcon from "../../assets/pdf.png";
-import wordIcon from "../../assets/word.png";
-import jpgIcon from "../../assets/jpg.png";
-import pptIcon from "../../assets/ppt.png";
-import txtIcon from "../../assets/txt.png";
+
+import profile from "../../assets/profile.jpg";
+
+import pdf from "../../assets/pdf.png";
+import word from "../../assets/word.png";
+import jpg from "../../assets/jpg.png";
+import ppt from "../../assets/ppt.png";
+import txt from "../../assets/txt.png";
 
 import {
-  FaLinkedin,
-  FaInstagram,
+  FaArrowDown,
   FaGithub,
-  FaArrowRight,
+  FaInstagram,
+  FaLinkedin,
 } from "react-icons/fa";
 
 function Hero() {
   return (
     <section className="hero" id="home">
+      <div className="container hero-container">
 
-      {/* Left Side */}
-      <div className="hero-left">
+        {/* LEFT */}
 
-        <span className="welcome">
-          👋 Welcome to FreeFileConvert
-        </span>
+        <div className="hero-left">
 
-        <h1>
-          Hi, I'm <span>Gourav Chougale</span>
-        </h1>
+          <span className="hero-badge">
+            👋 Welcome!
+          </span>
 
-        <h2>
-          Full Stack Developer (Java & Python)
-        </h2>
+          <h1>
+            Hi, I'm <span>Gaurav Chougale</span>
+          </h1>
 
-        <p>
-          A modern, fast and secure Universal File Converter that helps
-          users convert files in seconds without complicated software.
-        </p>
+          <h2>
+            Full Stack Developer (Java & Python)
+          </h2>
 
-        {/* Buttons */}
-        <div className="hero-buttons">
-          <a href="#converter" className="hero-btn">
-  Start Converting
-  <FaArrowRight />
-</a>
+          <p>
+            I built this Universal File Converter to make
+            file conversion simple, fast and secure for
+            everyone.
+          </p>
 
-<a href="#features" className="secondary-btn">
-  Learn More
-</a>
+          <div className="hero-social">
+
+            <a
+              href="https://www.linkedin.com/in/gourav-chougale-961"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin />
+              LinkedIn
+            </a>
+
+            <a
+              href="https://www.instagram.com/shivahoilc_gaurav_0113"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram />
+              Instagram
+            </a>
+
+            <a
+              href="https://github.com/gauravchougale6765-eng"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub />
+              GitHub
+            </a>
+
+          </div>
+
+          <a
+            href="#converter"
+            className="hero-btn"
+          >
+            Start Converting
+            <FaArrowDown />
+          </a>
+
         </div>
 
-        {/* Social */}
+        {/* RIGHT */}
 
-        <div className="social-links">
+        <div className="hero-right">
 
-          
+          <div className="hero-circle">
 
-  <a
+            <img
+              src={profile}
+              alt="Gaurav"
+              className="profile-image"
+            />
 
-    href="https://www.linkedin.com/in/gourav-chougale-961"
+            <img
+              src={pdf}
+              className="floating pdf"
+              alt="pdf"
+            />
 
-    target="_blank"
+            <img
+              src={word}
+              className="floating word"
+              alt="word"
+            />
 
-    rel="noopener noreferrer"
+            <img
+              src={jpg}
+              className="floating jpg"
+              alt="jpg"
+            />
 
-    aria-label="LinkedIn"
+            <img
+              src={ppt}
+              className="floating ppt"
+              alt="ppt"
+            />
 
-  >
+            <img
+              src={txt}
+              className="floating txt"
+              alt="txt"
+            />
 
-    <FaLinkedin />
-
-  </a>
-
-
-
-  <a
-
-    href="https://www.instagram.com/shivahoilc_gaurav_0113"
-
-    target="_blank"
-
-    rel="noopener noreferrer"
-
-    aria-label="Instagram"
-
-  >
-
-    <FaInstagram />
-
-  </a>
-
-
-
-  <a
-
-    href="https://github.com/gauravchougale6765-eng"
-
-    target="_blank"
-
-    rel="noopener noreferrer"
-
-    aria-label="GitHub"
-
-  >
-
-    <FaGithub />
-
-  </a>
-        </div>
-      </div>
-
-      {/* Right Side */}
-
-      <div className="hero-right">
-
-        <div className="image-container">
-
-          {/* Orbit Ring */}
-          <div className="orbit-ring"></div>
-
-          <img
-            src={heroImg}
-            alt="Profile"
-            className="hero-image"
-          />
-
-          <img src={pdfIcon} alt="PDF" className="pdf-icon floating" />
-          <img src={wordIcon} alt="Word" className="word-icon floating" />
-          <img src={jpgIcon} alt="JPG" className="jpg-icon floating" />
-          <img src={pptIcon} alt="PPT" className="ppt-icon floating" />
-          <img src={txtIcon} alt="TXT" className="txt-icon floating" />
+          </div>
 
         </div>
 
       </div>
-
     </section>
   );
 }

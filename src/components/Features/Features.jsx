@@ -1,78 +1,86 @@
 import "./Features.css";
+
 import {
   FaBolt,
   FaShieldAlt,
   FaCloudUploadAlt,
-  FaExchangeAlt,
   FaMobileAlt,
-  FaCheckCircle,
+  FaGlobe,
+  FaLock,
 } from "react-icons/fa";
 
 function Features() {
+  const features = [
+    {
+      icon: <FaBolt />,
+      title: "Lightning Fast",
+      description:
+        "Convert your files within seconds using our optimized FastAPI backend.",
+    },
+    {
+      icon: <FaShieldAlt />,
+      title: "100% Secure",
+      description:
+        "Your uploaded files remain private and are automatically removed after conversion.",
+    },
+    {
+      icon: <FaCloudUploadAlt />,
+      title: "Easy Upload",
+      description:
+        "Drag & drop files or browse from your device with a simple interface.",
+    },
+    {
+      icon: <FaMobileAlt />,
+      title: "Responsive Design",
+      description:
+        "Works perfectly on mobile, tablet, laptop and desktop devices.",
+    },
+    {
+      icon: <FaGlobe />,
+      title: "Multiple Formats",
+      description:
+        "Support for PDF, JPG, PNG, WEBP, TXT and many more formats.",
+    },
+    {
+      icon: <FaLock />,
+      title: "Privacy First",
+      description:
+        "We never store your files permanently. Your privacy is our priority.",
+    },
+  ];
+
   return (
     <section className="features" id="features">
+      <div className="container">
 
-      <h2>Why Choose Our File Converter?</h2>
+        <div className="features-header">
+          <h2>Why Choose FreeFileConverter?</h2>
 
-      <p className="feature-subtitle">
-        Fast, Secure and Easy File Conversion for Everyone.
-      </p>
-
-      <div className="feature-container">
-
-        <div className="feature-card">
-          <FaBolt className="feature-icon" />
-          <h3>Fast Conversion</h3>
           <p>
-            Convert your files within seconds using our optimized conversion
-            engine.
+            Powerful, secure and easy-to-use file conversion tools designed
+            for everyone.
           </p>
         </div>
 
-        <div className="feature-card">
-          <FaShieldAlt className="feature-icon" />
-          <h3>100% Secure</h3>
-          <p>
-            Your uploaded files remain private and are automatically deleted
-            after conversion.
-          </p>
-        </div>
+        <div className="features-grid">
 
-        <div className="feature-card">
-          <FaCloudUploadAlt className="feature-icon" />
-          <h3>Easy Upload</h3>
-          <p>
-            Simply drag & drop your file or choose it from your computer.
-          </p>
-        </div>
+          {features.map((feature, index) => (
+            <div className="feature-card" key={index}>
 
-        <div className="feature-card">
-          <FaExchangeAlt className="feature-icon" />
-          <h3>Multiple Formats</h3>
-          <p>
-            Convert PDF, DOCX, JPG, PNG, PPTX, TXT, HTML, WEBP and many more.
-          </p>
-        </div>
+              <div className="feature-icon">
+                {feature.icon}
+              </div>
 
-        <div className="feature-card">
-          <FaMobileAlt className="feature-icon" />
-          <h3>Responsive Design</h3>
-          <p>
-            Works perfectly on desktop, tablet and mobile devices.
-          </p>
-        </div>
+              <h3>{feature.title}</h3>
 
-        <div className="feature-card">
-          <FaCheckCircle className="feature-icon" />
-          <h3>Free to Use</h3>
-          <p>
-            No registration required. Upload, convert and download your files
-            for free.
-          </p>
+              <p>{feature.description}</p>
+
+            </div>
+          ))}
+
         </div>
 
       </div>
-
     </section>
   );
 }
