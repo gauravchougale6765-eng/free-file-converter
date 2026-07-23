@@ -57,7 +57,7 @@ function Footer() {
                 <FaInstagram />
               </a>
 
-              <a href="mailto:support@freefileconverter.com">
+              <a href="gauravchougale6765@gmail.com">
                 <FaEnvelope />
               </a>
 

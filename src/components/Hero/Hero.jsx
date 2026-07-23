@@ -29,7 +29,7 @@ function Hero() {
           </span>
 
           <h1>
-            Hi, I'm <span>Gaurav Chougale</span>
+            Hi, I'm <span>Gourav Chougale</span>
           </h1>
 
           <h2>
@@ -37,8 +37,8 @@ function Hero() {
           </h2>
 
           <p>
-            I built this Universal File Converter to make
-            file conversion simple, fast and secure for
+            I built this Free File Converter to make
+            file conversion Free , simple, fast and secure for
             everyone.
           </p>
 
