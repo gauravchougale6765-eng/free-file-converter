@@ -5,14 +5,9 @@ from app.routers import convert
 
 app = FastAPI(title="File Converter API")
 
-# Vite's default dev server runs on port 5173.
-# Add your production frontend URL here too once you deploy.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
+    allow_origins=["*"],  # Deploy नंतर इथे तुमची production frontend URL टाकू
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
